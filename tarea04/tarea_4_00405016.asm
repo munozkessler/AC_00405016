@@ -6,13 +6,13 @@ section .text
 	call 	w_strng
 
 	xor 	si, si 	
-lp:	call 	kb
+lupi:	call 	kb
 	cmp 	al, "$"
 	je	avgprev
         sub     al, 30h
 	mov	[300h+si], al 
 	inc 	si
-	jmp 	lp
+	jmp 	lupi
 
 avgprev:mov     bx, 0000h
         mov     ax, 0000h
